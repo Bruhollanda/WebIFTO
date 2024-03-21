@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Venda Details</title>
+</head>
+<body>
+<table class="table" border="1">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Descrição</th>
+        <th>Quantidade</th>
+        <th>Soma</th>
+        <th>Total</th>
+    </tr>
+    </thead>
+    <tr th:each="i:${itemvenda}">
+        <td th:text="${i.id}"> </td>
+        <td th:text="${i.produto.descricao}"> </td>
+        <td th:text="${i.quantidade}"> </td>
+        <td th:text="${i.total}"> </td>
+        <td th:text="${i.venda.total()}"> </td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table class="table" border="1">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Data</th>
+        <th colspan="2">Ações</th>
+    </tr>
+    </thead>
+    <tr th:each="v:${vendas}">
+        <td th:text="${v.id}"> </td>
+        <td th:text="${v.data}"> </td>
+        <td> <a th:href="@{/itemvenda/details/{id}(id=${v.id})}">Detalhes</a> </td>
+    </tr>
+</table>
+</body>
+</html>
